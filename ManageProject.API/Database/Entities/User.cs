@@ -15,17 +15,19 @@ namespace ManageProject.API.Database.Entities
 
         [Required]
         [StringLength(32)]
-        public string  Username { get; set; }
+        public string  Username { get; set; } = string.Empty;
 
         
-        [Required]
-        [StringLength(255)]
+    
+
         public string  Email { get; set; }
 
 
-        [Required]
-        [StringLength(10)]
-        public string Password { get; set; }
+        // public string Password { get; set; }
+
+        public List<Order> Orders { get; set; }
+        public Account  Account{ get; set; }
+        // public int AccountId { get; set; }
    
         // public byte[] passwordHash { get; set; }
     }

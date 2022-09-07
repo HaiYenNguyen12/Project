@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ManageProject.API.Database.Entities
 {
-      [Table("Item")]
-    public class Item
+      [Table("Account")]
+    public class Account
     {
          [Key]
         public int Id { get; set; }
@@ -16,14 +16,18 @@ namespace ManageProject.API.Database.Entities
        
         public string  Name { get; set; }
 
-        public string  Description { get; set; }
+        public string  Password { get; set; }
+        public string  Email { get; set; }
 
-        public double  Price { get; set; }
-        public double Discount { get; set; }
-        public int  Quantity { get; set; }
-        public DateTime? Updated { get; set; } = DateTime.Now;
-        public DateTime? Created { get; set; } = DateTime.Now;
-        public List<Order> Orders { get; set; }
+        public User  User{ get; set; }
+        public int UserId { get; set; }
+
+        // public double  Price { get; set; }
+        // public double Discount { get; set; }
+        // public int  Quantity { get; set; }
+        // public DateTime? Updated { get; set; } = DateTime.Now;
+        // public DateTime? Created { get; set; } = DateTime.Now;
+        // public List<Order> Orders { get; set; }
 
 
         // public Category Category { get; set; }
